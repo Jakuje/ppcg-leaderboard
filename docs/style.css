@@ -1,0 +1,50 @@
+body, html {
+  font-family: 'Segoe UI', 'Helvetica', sans-serif;
+  font-size: 0.95em;
+}
+td {
+  padding: 5px;
+  border: 1px solid black;
+}
+td:first-child { 
+  max-width: 17vw;
+}
+th {
+  padding: 3px;
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+p, h1, h2, pre {
+  text-align: center;
+}
+.leftdiv {
+  float: left;
+}
+.rightdiv {
+  float: right;
+}
+.centered {
+  text-align: center;
+}
+.clearfloats {
+  clear: both;
+}
+.no-bottom {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 900px)  {
+  .leftdiv, .rightdiv {
+    float: none;
+  }
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td:first-child { 
+    max-width: none;
+  }
+}
