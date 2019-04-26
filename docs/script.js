@@ -14,21 +14,19 @@ function linkify(text, link) {
 }
 
 function process_data(items) {
-  console.log("only once")
   var result = [];
 
   Object.keys(items).forEach(function(index) {
     var first_line = items[index].body.split("\n", 1)[0].replace(/<\/?strong>/g, "");
-    var info = /<h\d><a href="(.*?)".*?>(.*)<\/a>|<h\d>(?:<.*>)?(.*?)[,(-]/i.exec(first_line);
+    var info = /<h\d>.*?<a href="(.*?)".*?>(.*?)<\/a>|<h\d>(?:\[.*?\])?(?:<.*>)?(.*?)[,(-]/i.exec(first_line);
     var data = {};
     try {
       data.author = items[index].owner.display_name,
       data.link = info[1],
-      data.lang = info[2] || info[3],
+      data.lang = (info[2] || info[3]).trim(),
       data.byte_count = /(-?\d+)\D*<\/h\d>/.exec(first_line)[1],
       data.share_link = items[index].share_link,
       data.author_link = items[index].owner.link;
-      console.log(data);
     } catch(e) {
       console.log("Encountered error with title: "+ first_line);
     }
