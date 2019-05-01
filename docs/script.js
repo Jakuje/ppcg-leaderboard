@@ -2,7 +2,7 @@ try {
   var QUESTION_ID = /id=([0-9]+)/.exec(window.location.href)[1];
 } catch (e) {
   document.getElementById("disable-no-id").style.display = "none";
-  document.body.innerHTML += "<h3>Whoops! You didn't specify an ID.</h3>";
+  document.body.innerHTML += "<h1>Whoops! You didn't specify an ID.</h1>";
 }
 
 var api_request = new XMLHttpRequest(),
