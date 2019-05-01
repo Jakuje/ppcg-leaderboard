@@ -1,6 +1,7 @@
 try {
   var QUESTION_ID = /id=([0-9]+)/.exec(window.location.href)[1];
 } catch (e) {
+  document.getElementById("disable-no-id").style.display = "none";
   document.body.innerHTML += "<p>Whoops! You didn't specify an ID.</p>";
 }
 
