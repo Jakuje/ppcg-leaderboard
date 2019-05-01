@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Leaderboard</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 class="no-bottom">How To Add A Leaderboard</h1>
+    <p>It's simple to implement a leaderboard in your Code Golf post so that all users can see the results of the competition without scrolling through the whole thread.</p>
+    <p>To use a leaderboard, include the following Markdown at the bottom of your post:</p>
+    <textarea rows="20" cols="100" class="code" spellcheck="false" disabled="true">
+# Leaderboard
+
+You can view the leaderboard for this post by expanding the widget/snippet below. In order for your post to be included in the rankings, you need a header (`# header text`) with the following info:
+
+* The name of the language (end it with a comma `,` or dash `-`), followed by...
+
+* The byte count, as the last number to appear in your header.
+
+For example, `JavaScript (ES6), 72 bytes` is valid, but `Fortran, 143 bytes (8-bit)` is invalid because the byte count is not the last number in the header (your answer will be recognized as 8 bytes - don't take advantage of this).
+
+<!-- begin snippet: js hide: false console: false babel: true -->
+      
+<!-- language: lang-html -->
+    
+<iframe src="https://xmikee1.github.io/ppcg-leaderboard/?id={{QUESTION ID}}" width="100%"     height="100%" style="border: none;">Oops, your browser is too old to view this content! Please    upgrade to a newer version of your browser that supports HTML5.</iframe><style>html,body{margin:0;  padding:0;height:100%;overflow:hidden}</style>
+    
+<!-- end snippet -->
+    </textarea>
+    <br>
+    <p>In the <code>iframe src</code>, replace <code>{{QUESTION ID}}</code> with the ID of your post. Report any bugs on <a href="https://codegolf.meta.stackexchange.com/questions/17600/introducing-the-new-ppcg-leaderboard-widget">this thread</a>.</p>
+    <hr>
+    <p><em>Made with ❤ by <a href="https://stackexchange.com/users/13467462/connectyourcharger">connectyourcharger</a>. Licensed under the <a href="LICENSE.txt">MIT license</a>.</em></p>
+  </body>
+</html>
