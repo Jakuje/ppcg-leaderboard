@@ -1,5 +1,10 @@
-var QUESTION_ID = /id=([0-9]+)/.exec(window.location.href)[1];
-  api_request = new XMLHttpRequest(),
+try {
+  var QUESTION_ID = /id=([0-9]+)/.exec(window.location.href)[1];
+catch (e) {
+  document.write("<p>Whoops! You didn't specify an ID.</p>");
+}
+
+var api_request = new XMLHttpRequest(),
   count = 1;
 
 function new_table_row(table_node, val1, val2, val3) {
