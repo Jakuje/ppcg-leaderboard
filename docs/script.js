@@ -1,7 +1,7 @@
 try {
   var QUESTION_ID = /id=([0-9]+)/.exec(window.location.href)[1];
 } catch (e) {
-  document.write("<p>Whoops! You didn't specify an ID.</p>");
+  document.body.innerHTML = "<p>Whoops! You didn't specify an ID.</p>";
 }
 
 var api_request = new XMLHttpRequest(),
