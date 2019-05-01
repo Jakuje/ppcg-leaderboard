@@ -36,6 +36,14 @@ p, h1, h2, pre {
 .no-bottom {
   margin-bottom: 0;
 }
+.code {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  overflow: auto;
+  white-space: pre-wrap;
+  resize: none;
+}
 @media only screen and (max-width: 900px)  {
   .leftdiv, .rightdiv {
     float: none;
