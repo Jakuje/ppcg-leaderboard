@@ -1,4 +1,4 @@
-#ppcg-leaderboard
+# ppcg-leaderboard
 
 **NOTE: The site, Code Golf Stack Exchange, is no longer referred to as "PPCG". I will not change the name of the repository because the URL of the tool would change, which would break a lot of links.**
 
