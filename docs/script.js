@@ -24,17 +24,18 @@ function process_data(items) {
 
   Object.keys(items).forEach(function(index) {
     var first_line = items[index].body.split("\n", 1)[0].replace(/<\/?strong>/g, "");
+    var first_line_text = first_line.replace(/<[^>]*>/g, "");
     var info = /<h\d>.*?<a href="(.*?)".*?>(.*?)<\/a>|<h\d>(?:\[.*?\])?(?:<.*>)?(.*?)[,(-]/i.exec(first_line);
     var data = {};
     try {
       data.author = items[index].owner.display_name,
       data.link = info[1],
       data.lang = (info[2] || info[3]).trim(),
-      data.byte_count = /(-?\d+)\D*<\/h\d>/.exec(first_line)[1],
+      data.byte_count = /(-?\d+)\D*$/.exec(first_line_text)[1],
       data.share_link = items[index].share_link,
       data.author_link = items[index].owner.link;
     } catch(e) {
-      console.log("Encountered error with title: "+ first_line);
+      console.log("Encountered error with title: "+ first_line_text);
     }
     result.push(data);
   });
